@@ -1,0 +1,24 @@
+<div class="list">
+  <br>
+  <!-- <h6>Total {{finaldata.length}} Entry</h6> -->
+  <table class="table table-striped" border="1">
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Total Worked</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of timeSumMap.entries()" [ngStyle]="{'background-color': (item[1]<100) ? '#73c7af' : '#ffffff'}">
+        <td >{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+
+
+
+
+<router-outlet></router-outlet>
